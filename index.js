@@ -33,7 +33,6 @@ function addSourceLocators (handlebarsEnvironment) {
   // so that we can pass the partial-name of to the source-locator
   const originalRegisterPartial = handlebarsEnvironment.registerPartial.bind(handlebarsEnvironment)
   handlebarsEnvironment.registerPartial = function registerPartialWithSourceLocators (name, value) {
-    console.log(name, value)
     if (Object.prototype.toString.call(name) === '[object Object]') {
       var partials = name
       Object.keys(partials).forEach((name) => this.registerPartial(name, partials[name]))
