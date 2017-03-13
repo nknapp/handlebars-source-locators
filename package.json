@@ -1,6 +1,6 @@
 {
   "name": "handlebars-source-locators",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Puts source-position markers into the Handlebars output",
   "repository": {
     "type": "git",
