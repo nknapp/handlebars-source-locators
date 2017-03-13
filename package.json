@@ -29,9 +29,15 @@
     "preversion": "npm run thoughtcheck"
   },
   "dependencies": {},
+  "peerDependencies": {
+    "handlebars": "^4.0.6"
+  },
   "devDependencies": {
+    "chai": "^3.5.0",
     "ghooks": "^1.0.3",
+    "handlebars": "^4.0.6",
     "mocha": "^2.3.3",
+    "standard": "^9.0.1",
     "thoughtful-release": "^0.3.0",
     "trace-and-clarify-if-possible": "^1.0.0"
   },
@@ -50,5 +56,5 @@
       "pre-commit": "standard"
     }
   },
-  "keywords": [  ]
+  "keywords": []
 }
