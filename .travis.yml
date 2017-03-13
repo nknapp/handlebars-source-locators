@@ -6,8 +6,9 @@ node_js:
 before_script:
   - standard
 script:
-  - npm install istanbul
+  - npm install istanbul thought
   - istanbul cover ./node_modules/.bin/_mocha --report lcovonly
+  - thought up-to-date
 after_script:
   - npm install coveralls
   - cat ./coverage/lcov.info | coveralls

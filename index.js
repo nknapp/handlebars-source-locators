@@ -8,13 +8,24 @@ var Handlebars = require('handlebars')
 
 module.exports = addSourceLocators
 /**
- * Adds source-locators so a Handlebars instance.
- * This is rejected, if Handlebars is the original Handlebars-environment.
- * Please use "Handlebars.create" to create a new environment and
- * pass that to this function.
+ * Adds source-locators to a Handlebars-environment. The template-output
+ * will include tags of the form `<sl line="1" col="4" [partial="partialName"]>`
  *
- * @param {Handlebars} a Handlebars environment
+ * The meaning is that the output directly after this tag originates from the
+ * line/column in the tag. If the "partial" is not set, the output originates from the
+ * main-template.
  *
+ * The "line"-property is based off 1. The "col"-property is based off 0.
+ * This is consistent with the output of the "Handlebars.parse()"-function.
+ *
+ *
+ * @param handlebarsEnvironment {Handlebars} the Handlebars environment to modify
+ *
+ *
+ * @throws Error if `handlebarsEnvironment` is the default Handlebars-environment.
+ *   Please use "Handlebars.create" to create a new environment and pass that to this function.
+ *   The default instance may be used in many places of the dependency tree. Modifying it may
+ *   cause unexpected behavior in other libraries that seem not connected to this one at all.
  *
  * @public
  */
