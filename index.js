@@ -33,9 +33,6 @@ function addSourceLocators (handlebarsEnvironment) {
   }
 
   handlebarsEnvironment.JavaScriptCompiler = SourceMapCompiler
-  handlebarsEnvironment.registerHelper('createSourceLocator', function (sourceLine, sourceColumn, partial) {
-    return `<sl line="${sourceLine}" col="${sourceColumn}" partial="${partial}"></sl>`
-  })
 
   // Wrap "registerPartial":
   // Register the parsed AST of the partial and make sure the the 'source'-property is set on all node
