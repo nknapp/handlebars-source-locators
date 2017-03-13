@@ -94,9 +94,6 @@ main-template.
 The "line"-property is based off 1. The "col"-property is based off 0.
 This is consistent with the output of the "Handlebars.parse()"-function.
 
-The function throws an error, if Handlebars
-Otherwise
-
 **Kind**: global function  
 **Throws**:
 
