@@ -4,6 +4,7 @@
  * Copyright (c) 2017 Nils Knappmeier.
  * Released under the MIT license.
  */
+
 var Handlebars = require('handlebars')
 
 module.exports = addSourceLocators
@@ -18,7 +19,7 @@ module.exports = addSourceLocators
  * The "line"-property is based off 1. The "col"-property is based off 0.
  * This is consistent with the output of the "Handlebars.parse()"-function.
  *
- * @param handlebarsEnvironment {Handlebars} the Handlebars environment to modify
+ * @param {Handlebars} handlebarsEnvironment  the Handlebars environment to modify
  *
  * @throws Error if `handlebarsEnvironment` is the default Handlebars-environment.
  *   Please use "Handlebars.create" to create a new environment and pass that to this function.
